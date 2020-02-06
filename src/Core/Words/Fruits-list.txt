@@ -1,18 +1,18 @@
-Apple
-Orange
-Pear
-Banana
-Grape
-Carrot
-Turnip
-Onion
-Cucumber
-Pineapple
-Passion fruit
-Mellon
-Plum
-Kiwi
-Lemon
-Coconut
-Apricot
-Avocado
+apple
+orange
+pear
+banana
+grape
+carrot
+turnip
+onion
+cucumber
+pineapple
+passion fruit
+mellon
+plum
+kiwi
+lemon
+coconut
+apricot
+avocado

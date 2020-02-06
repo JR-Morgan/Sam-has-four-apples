@@ -1,28 +1,33 @@
 package Core;
 
-import java.util.List;
+import Core.Words.IWord;
+import Core.Words.NumberWord;
+import Core.Words.Word;
+
+import java.util.ArrayList;
 
 public class Sentence {
 
-    private String name, verbAdd, fruit, verbSub;
-    private int numberAdd, numberSub;
+    private ArrayList<IWord> words;
+    private NumberWord numberAdd, numberSub;
 
-    public Sentence(String name, String verbAdd, int numberAdd, String fruit, String verbSub, int numberSub) {
-        this.name       = name;
-        this.verbAdd    = verbAdd;
+    public Sentence(ArrayList<IWord> words, NumberWord numberAdd, NumberWord numberSub) {
+        this.words = words;
         this.numberAdd  = numberAdd;
-        this.fruit      = fruit;
-        this.verbSub    = verbSub;
         this.numberSub  = numberSub;
     }
 
     @Override
     public String toString() {
-        String fruit = this.fruit;
-        if (numberAdd > 1) fruit += "s";
-        return String.format("%s %s %s %s, he %s %s", name, verbAdd, numberAdd, fruit, verbSub, numberSub);
+        String temp3 = words.get(3).toString();
+        if (numberAdd.getValue() > 1) temp3 += "s";
+        return String.format("%s %s %s %s, he %s %s", toUpper(words.get(0).toString()), words.get(1), words.get(2), toUpper(temp3), words.get(4), words.get(5));
     }
 
-    public int getNumberAdd() { return numberAdd; }
-    public int getNumberSub() { return numberSub; }
+    public NumberWord getNumberAdd() { return numberAdd; }
+    public NumberWord getNumberSub() { return numberSub; }
+
+    private static String toUpper(String str) {
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
+    }
 }

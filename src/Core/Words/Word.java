@@ -1,7 +1,7 @@
 package Core.Words;
 
-public class Word {
-    String value, type;
+public class Word implements IWord {
+    private String value, type;
 
     public Word(String value, String type) {
         this.value = value;
@@ -12,15 +12,9 @@ public class Word {
         return type;
     }
 
-    public String getValue() {
+    @Override
+    public String toString() {
         return value;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }
