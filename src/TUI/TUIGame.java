@@ -21,20 +21,23 @@ public class TUIGame extends Game {
         System.out.println("How many Apples does Sam Have?");
 
         if (checkInput(sentence, Integer.parseInt(in.nextLine()))) {
+
             nextRound();
         } else {
             displayIncorrect();
         }
+        System.out.println();
+
     }
 
     @Override
     protected void displayWordRule(IWord oldWord, IWord newWord) {
-        System.out.println(oldWord.toString() + " is now " + newWord.toString());
+        System.out.println("New Rule: " + oldWord.toString() + " is now " + newWord.toString() + "\n");
     }
 
     @Override
     protected void displayOrderRule(IWord word1, IWord word2) {
-        System.out.println(word1.toString() + " has swapped with " + word2.toString());
+        System.out.println("New Rule: " +word1.toString() + " has swapped with " + word2.toString()+ "\n");
     }
 
     @Override
